@@ -4,7 +4,7 @@
   <p><font face="Verdana, Arial, Helvetica, sans-serif"><img src="Images/server.jpg"></font></p><p></p> <font face="Verdana, Arial, Helvetica, sans-serif">
 <?php
 $system = ini_get('system');
-$win  = (bool)  $windows;
+$win  = is_bool($system);
 $count = 1;
 
 // -------------------------
@@ -39,7 +39,7 @@ $services[10] = "User Settings";
 echo "<table border=\"0\" align=\"center\">";
 foreach ($host as $value) 
 {
-	 $counter = $counter + 1;
+	 $counter = $count + 1;
 	  echo "<tr><td width=120>$value</td>"; 
       echo '<body bgcolor="#FFFFFF" text="#000000"></body>';       
       //check target IP or domain
